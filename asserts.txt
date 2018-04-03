@@ -1,0 +1,25 @@
+fact: (inst bigbox box)
+fact: (size bigbox big)
+fact: (color bigbox red)
+
+fact: (inst littlebox box)
+fact: (size littlebox small)
+fact: (color littlebox blue)
+
+fact: (inst pyramid1 pyramid)
+fact: (size pyramid1 small)
+fact: (color pyramid1 blue)
+
+fact: (inst pyramid2 pyramid)
+fact: (size pyramid2 small)
+fact: (color pyramid2 green)
+
+fact: (inst pyramid3 pyramid)
+fact: (size pyramid3 small)
+fact: (color pyramid3 green)
+
+rule:((size ?x small) (size ?y big) (inst ?y box)) -> (fits ?x ?y)
+
+rule:((color ?x red) (color ?y green) ) -> (contrasting ?x ?y)
+
+

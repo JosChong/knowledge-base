@@ -1,0 +1,359 @@
+[0;32m
+=================== Loading in the data ===================[0m
+[0;32m
+=================== Setting up the Knowledge Base ===================[0m
+
+KB
+# of facts: 0
+# of rules: 0
+
+[0;32m
+=================== Testing KB_Assert ===================[0m
+Asserting rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y']
+
+Asserting rule: [['color', '?x', 'red'], ['color', '?y', 'green']] -> ['contrasting', '?x', '?y']
+
+Asserting fact: ['inst', 'bigbox', 'box']
+
+Asserting fact: ['size', 'bigbox', 'big']
+
+Asserting fact: ['color', 'bigbox', 'red']
+
+Inferring rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y'] from fact: ['color', 'bigbox', 'red'] & rule: [['color', '?x', 'red'], ['color', '?y', 'green']] -> ['contrasting', '?x', '?y']
+
+Asserting fact: ['inst', 'littlebox', 'box']
+
+Asserting fact: ['size', 'littlebox', 'small']
+
+Inferring rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'littlebox', '?y'] from fact: ['size', 'littlebox', 'small'] & rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'littlebox', '?y']
+
+Inferring fact: ['fits', 'littlebox', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox']
+
+Asserting fact: ['color', 'littlebox', 'blue']
+
+Asserting fact: ['inst', 'pyramid1', 'pyramid']
+
+Asserting fact: ['size', 'pyramid1', 'small']
+
+Inferring rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid1', '?y'] from fact: ['size', 'pyramid1', 'small'] & rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid1', '?y']
+
+Inferring fact: ['fits', 'pyramid1', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox']
+
+Asserting fact: ['color', 'pyramid1', 'blue']
+
+Asserting fact: ['inst', 'pyramid2', 'pyramid']
+
+Asserting fact: ['size', 'pyramid2', 'small']
+
+Inferring rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid2', '?y'] from fact: ['size', 'pyramid2', 'small'] & rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid2', '?y']
+
+Inferring fact: ['fits', 'pyramid2', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox']
+
+Asserting fact: ['color', 'pyramid2', 'green']
+
+Inferring fact: ['contrasting', 'bigbox', 'pyramid2'] from fact: ['color', 'pyramid2', 'green'] & rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+Asserting fact: ['inst', 'pyramid3', 'pyramid']
+
+Asserting fact: ['size', 'pyramid3', 'small']
+
+Inferring rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid3', '?y'] from fact: ['size', 'pyramid3', 'small'] & rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid3', '?y']
+
+Inferring fact: ['fits', 'pyramid3', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox']
+
+Asserting fact: ['color', 'pyramid3', 'green']
+
+Inferring fact: ['contrasting', 'bigbox', 'pyramid3'] from fact: ['color', 'pyramid3', 'green'] & rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+fact: ['inst', 'bigbox', 'box']
+fact: ['size', 'bigbox', 'big']
+fact: ['color', 'bigbox', 'red']
+fact: ['inst', 'littlebox', 'box']
+fact: ['size', 'littlebox', 'small']
+fact: ['fits', 'littlebox', 'bigbox']
+fact: ['color', 'littlebox', 'blue']
+fact: ['inst', 'pyramid1', 'pyramid']
+fact: ['size', 'pyramid1', 'small']
+fact: ['fits', 'pyramid1', 'bigbox']
+fact: ['color', 'pyramid1', 'blue']
+fact: ['inst', 'pyramid2', 'pyramid']
+fact: ['size', 'pyramid2', 'small']
+fact: ['fits', 'pyramid2', 'bigbox']
+fact: ['color', 'pyramid2', 'green']
+fact: ['contrasting', 'bigbox', 'pyramid2']
+fact: ['inst', 'pyramid3', 'pyramid']
+fact: ['size', 'pyramid3', 'small']
+fact: ['fits', 'pyramid3', 'bigbox']
+fact: ['color', 'pyramid3', 'green']
+fact: ['contrasting', 'bigbox', 'pyramid3']
+[0;32m
+=================== Testing KB_ask ===================[0m
+
+Asking : ['inst', '?x', 'box']
+[('?X', 'bigbox')] [('?X', 'littlebox')]
+
+Asking : ['size', '?x', 'big']
+[('?X', 'bigbox')]
+
+Asking : ['color', '?x', 'red']
+[('?X', 'bigbox')]
+
+Asking : ['inst', 'littlebox', '?x']
+[('?X', 'box')]
+
+Asking : ['size', 'littlebox', '?x']
+[('?X', 'small')]
+
+Asking : ['color', 'littlebox', '?x']
+[('?X', 'blue')]
+
+Asking : ['inst', '?x', 'pyramid']
+[('?X', 'pyramid1')] [('?X', 'pyramid2')] [('?X', 'pyramid3')]
+[0;32m
+=================== Testing KB_ask and instantiate ===================[0m
+
+Asking : ['inst', '?x', 'box']
+Found: ['inst', 'bigbox', 'box'] ['inst', 'littlebox', 'box']
+
+Asking : ['size', '?x', 'big']
+Found: ['size', 'bigbox', 'big']
+
+Asking : ['color', '?x', 'red']
+Found: ['color', 'bigbox', 'red']
+
+Asking : ['inst', 'littlebox', '?x']
+Found: ['inst', 'littlebox', 'box']
+
+Asking : ['size', 'littlebox', '?x']
+Found: ['size', 'littlebox', 'small']
+
+Asking : ['color', 'littlebox', '?x']
+Found: ['color', 'littlebox', 'blue']
+
+Asking : ['inst', '?x', 'pyramid']
+Found: ['inst', 'pyramid1', 'pyramid'] ['inst', 'pyramid2', 'pyramid'] ['inst', 'pyramid3', 'pyramid']
+[0;32m
+=================== Testing retract ===================[0m
+
+KB
+# of facts: 21
+# of rules: 11
+
+Retracting fact: ['color', 'bigbox', 'red']
+
+Removing support for rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+Removing fact: ['contrasting', 'bigbox', 'pyramid2']
+
+Removing fact: ['contrasting', 'bigbox', 'pyramid3']
+
+Removing rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+Removing fact: ['color', 'bigbox', 'red']
+
+Retracting fact: ['size', 'bigbox', 'big']
+
+Removing support for rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox']
+
+Removing fact: ['fits', 'littlebox', 'bigbox']
+
+Removing rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox']
+
+Removing support for rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox']
+
+Removing fact: ['fits', 'pyramid1', 'bigbox']
+
+Removing rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox']
+
+Removing support for rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox']
+
+Removing fact: ['fits', 'pyramid2', 'bigbox']
+
+Removing rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox']
+
+Removing support for rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox']
+
+Removing fact: ['fits', 'pyramid3', 'bigbox']
+
+Removing rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox']
+
+Removing fact: ['size', 'bigbox', 'big']
+
+KB
+# of facts: 13
+# of rules: 6
+
+[0;32m
+=================== Asserting what we just retracted ===================[0m
+Asserting fact: ['color', 'bigbox', 'red']
+
+Inferring rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y'] from fact: ['color', 'bigbox', 'red'] & rule: [['color', '?x', 'red'], ['color', '?y', 'green']] -> ['contrasting', '?x', '?y']
+
+Inferring fact: ['contrasting', 'bigbox', 'pyramid2'] from fact: ['color', 'pyramid2', 'green'] & rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+Inferring fact: ['contrasting', 'bigbox', 'pyramid3'] from fact: ['color', 'pyramid3', 'green'] & rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+
+Asserting fact: ['size', 'bigbox', 'big']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'littlebox', '?y']
+
+Inferring fact: ['fits', 'littlebox', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid1', '?y']
+
+Inferring fact: ['fits', 'pyramid1', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid2', '?y']
+
+Inferring fact: ['fits', 'pyramid2', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox']
+
+Inferring rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox'] from fact: ['size', 'bigbox', 'big'] & rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid3', '?y']
+
+Inferring fact: ['fits', 'pyramid3', 'bigbox'] from fact: ['inst', 'bigbox', 'box'] & rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox']
+
+[0;32m
+=================== Testing against Why ===================[0m
+Explaining fact: ['inst', 'bigbox', 'box']
+fact: ['inst', 'bigbox', 'box'] Asserted!
+
+
+Explaining fact: ['inst', 'littlebox', 'box']
+fact: ['inst', 'littlebox', 'box'] Asserted!
+
+
+Explaining fact: ['size', 'littlebox', 'small']
+fact: ['size', 'littlebox', 'small'] Asserted!
+
+
+Explaining fact: ['color', 'littlebox', 'blue']
+fact: ['color', 'littlebox', 'blue'] Asserted!
+
+
+Explaining fact: ['inst', 'pyramid1', 'pyramid']
+fact: ['inst', 'pyramid1', 'pyramid'] Asserted!
+
+
+Explaining fact: ['size', 'pyramid1', 'small']
+fact: ['size', 'pyramid1', 'small'] Asserted!
+
+
+Explaining fact: ['color', 'pyramid1', 'blue']
+fact: ['color', 'pyramid1', 'blue'] Asserted!
+
+
+Explaining fact: ['inst', 'pyramid2', 'pyramid']
+fact: ['inst', 'pyramid2', 'pyramid'] Asserted!
+
+
+Explaining fact: ['size', 'pyramid2', 'small']
+fact: ['size', 'pyramid2', 'small'] Asserted!
+
+
+Explaining fact: ['color', 'pyramid2', 'green']
+fact: ['color', 'pyramid2', 'green'] Asserted!
+
+
+Explaining fact: ['inst', 'pyramid3', 'pyramid']
+fact: ['inst', 'pyramid3', 'pyramid'] Asserted!
+
+
+Explaining fact: ['size', 'pyramid3', 'small']
+fact: ['size', 'pyramid3', 'small'] Asserted!
+
+
+Explaining fact: ['color', 'pyramid3', 'green']
+fact: ['color', 'pyramid3', 'green'] Asserted!
+
+
+Explaining fact: ['color', 'bigbox', 'red']
+fact: ['color', 'bigbox', 'red'] Asserted!
+
+
+Explaining fact: ['contrasting', 'bigbox', 'pyramid2']
+fact: ['contrasting', 'bigbox', 'pyramid2']
+--- fact: ['color', 'pyramid2', 'green'] Asserted!
+--- rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+--- --- fact: ['color', 'bigbox', 'red'] Asserted!
+--- --- rule: [['color', '?x', 'red'], ['color', '?y', 'green']] -> ['contrasting', '?x', '?y'] Asserted!
+
+
+Explaining fact: ['contrasting', 'bigbox', 'pyramid3']
+fact: ['contrasting', 'bigbox', 'pyramid3']
+--- fact: ['color', 'pyramid3', 'green'] Asserted!
+--- rule: [['color', '?y', 'green']] -> ['contrasting', 'bigbox', '?y']
+--- --- fact: ['color', 'bigbox', 'red'] Asserted!
+--- --- rule: [['color', '?x', 'red'], ['color', '?y', 'green']] -> ['contrasting', '?x', '?y'] Asserted!
+
+
+Explaining fact: ['size', 'bigbox', 'big']
+fact: ['size', 'bigbox', 'big'] Asserted!
+
+
+Explaining fact: ['fits', 'littlebox', 'bigbox']
+fact: ['fits', 'littlebox', 'bigbox']
+--- fact: ['inst', 'bigbox', 'box'] Asserted!
+--- rule: [['inst', 'bigbox', 'box']] -> ['fits', 'littlebox', 'bigbox']
+--- --- fact: ['size', 'bigbox', 'big'] Asserted!
+--- --- rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'littlebox', '?y']
+--- --- --- fact: ['size', 'littlebox', 'small'] Asserted!
+--- --- --- rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y'] Asserted!
+
+
+Explaining fact: ['fits', 'pyramid1', 'bigbox']
+fact: ['fits', 'pyramid1', 'bigbox']
+--- fact: ['inst', 'bigbox', 'box'] Asserted!
+--- rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid1', 'bigbox']
+--- --- fact: ['size', 'bigbox', 'big'] Asserted!
+--- --- rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid1', '?y']
+--- --- --- fact: ['size', 'pyramid1', 'small'] Asserted!
+--- --- --- rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y'] Asserted!
+
+
+Explaining fact: ['fits', 'pyramid2', 'bigbox']
+fact: ['fits', 'pyramid2', 'bigbox']
+--- fact: ['inst', 'bigbox', 'box'] Asserted!
+--- rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid2', 'bigbox']
+--- --- fact: ['size', 'bigbox', 'big'] Asserted!
+--- --- rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid2', '?y']
+--- --- --- fact: ['size', 'pyramid2', 'small'] Asserted!
+--- --- --- rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y'] Asserted!
+
+
+Explaining fact: ['fits', 'pyramid3', 'bigbox']
+fact: ['fits', 'pyramid3', 'bigbox']
+--- fact: ['inst', 'bigbox', 'box'] Asserted!
+--- rule: [['inst', 'bigbox', 'box']] -> ['fits', 'pyramid3', 'bigbox']
+--- --- fact: ['size', 'bigbox', 'big'] Asserted!
+--- --- rule: [['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', 'pyramid3', '?y']
+--- --- --- fact: ['size', 'pyramid3', 'small'] Asserted!
+--- --- --- rule: [['size', '?x', 'small'], ['size', '?y', 'big'], ['inst', '?y', 'box']] -> ['fits', '?x', '?y'] Asserted!
+
+
+[0;32m
+=================== Testing against Ask PLus ===================[0m
+
+Asking about: [['color', '?y', 'red'], ['color', '?x', 'green']]
+Found 2 sets of bindings
+
+	Binding: [('?Y', 'bigbox'), ('?X', 'pyramid2')]
+	Facts: ['color', 'bigbox', 'red'] ['color', 'pyramid2', 'green']
+
+	Binding: [('?Y', 'bigbox'), ('?X', 'pyramid3')]
+	Facts: ['color', 'bigbox', 'red'] ['color', 'pyramid3', 'green']
+
+Asking about: [['color', '?y', '?x'], ['inst', '?y', 'box'], ['size', '?y', '?z']]
+Found 2 sets of bindings
+
+	Binding: [('?Y', 'littlebox'), ('?X', 'blue'), ('?Z', 'small')]
+	Facts: ['color', 'littlebox', 'blue'] ['inst', 'littlebox', 'box'] ['size', 'littlebox', 'small']
+
+	Binding: [('?Y', 'bigbox'), ('?X', 'red'), ('?Z', 'big')]
+	Facts: ['color', 'bigbox', 'red'] ['inst', 'bigbox', 'box'] ['size', 'bigbox', 'big']

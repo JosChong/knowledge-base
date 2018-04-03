@@ -1,0 +1,15 @@
+fact: (inst bigbox box)
+fact: (size bigbox big)
+fact: (color bigbox red)
+
+fact: (inst littlebox box)
+fact: (size littlebox small)
+fact: (color littlebox blue)
+
+fact: (inst pyramid1 pyramid)
+fact: (size pyramid1 small)
+fact: (color pyramid1 blue)
+
+fact: (inst pyramid2 pyramid)
+fact: (size pyramid2 small)
+fact: (color pyramid2 green)

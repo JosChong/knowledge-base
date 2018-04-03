@@ -1,0 +1,11 @@
+fact: (inst ?x box)
+fact: (size ?x big)
+fact: (color ?x red)
+
+fact: (inst littlebox ?x)
+fact: (size littlebox ?x)
+fact: (color littlebox ?x)
+
+fact: (inst ?x pyramid)
+
+
